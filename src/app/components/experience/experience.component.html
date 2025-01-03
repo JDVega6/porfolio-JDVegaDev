@@ -1,0 +1,9 @@
+<div
+  *ngFor="let experience of experiences"
+  class="border-l-4  bg-gray-40 dark:bg-gray-900 p-6 rounded-lg shadow-md mb-6"
+>
+  <h3 class="text-xl font-bold text-blue-500">{{ experience.title }}</h3>
+  <h4 class="text-lg font-medium text-gray-900 dark:text-gray-200">{{ experience.company }}</h4>
+  <time class="block text-sm text-gray-500 dark:text-gray-400">{{ experience.date }}</time>
+  <p class="mt-4 text-gray-900 dark:text-white">{{ experience.description }}</p>
+</div>
