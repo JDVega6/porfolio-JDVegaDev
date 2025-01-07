@@ -10,6 +10,7 @@ import { CSharpIconComponent } from '../../shared/Icons/csharp-icon/csharp-icon.
 import { DockerIconComponent } from '../../shared/Icons/docker-icon/docker-icon.component';
 import { RedisIconComponent } from '../../shared/Icons/redis-icon/redis-icon.component';
 import { HTMLIconComponent } from '../../shared/Icons/htmlicon/htmlicon.component';
+import { ElasticsearchIconComponent } from '../../shared/Icons/elasticsearch-icon/elasticsearch-icon.component';
 
 @Component({
   selector: 'projects',
@@ -24,7 +25,8 @@ import { HTMLIconComponent } from '../../shared/Icons/htmlicon/htmlicon.componen
               CSharpIconComponent,
               DockerIconComponent,
               RedisIconComponent,
-              HTMLIconComponent
+              HTMLIconComponent,
+              ElasticsearchIconComponent
             ],
   templateUrl: './projects.component.html',
   host: { class: 'block' }
@@ -74,6 +76,11 @@ export class ProjectsComponent {
       class: 'bg-gradient-to-l from-[#F5772A] to-[#F5E1D5]  w-full text-white',
       icon: HTMLIconComponent, 
     },
+    Elastic: {
+      name: 'ElasticSearch',
+      class: 'bg-gradient-to-l from-[#269357] to-[#A2EAB4]  w-full text-white',
+      icon: ElasticsearchIconComponent, 
+    },
   };
 
   PROJECTS = [
@@ -97,7 +104,7 @@ export class ProjectsComponent {
               con RabbitMQ, cacheo con Redis, búsqueda avanzada y logging con Elasticsearch, y una infraestructura orquestada con Docker Compose.`,
       link: "https://github.com/JDVega6/CQRS-Pattern",
       image: "img/Diagrama_CQRS.webp",
-      tags: [this.TAGS['CSharp'], this.TAGS['RabbitMQ'], this.TAGS['Docker'], this.TAGS['Redis']],
+      tags: [this.TAGS['CSharp'], this.TAGS['RabbitMQ'], this.TAGS['Docker'], this.TAGS['Redis'], this.TAGS['Elastic']],
     },
   ]
 }
